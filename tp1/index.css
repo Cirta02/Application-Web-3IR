@@ -1,0 +1,78 @@
+/* ----- Style général ----- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #001f24;
+    background: linear-gradient(225deg, rgba(0, 31, 36, 0.25) 0%, rgba(9, 9, 121, 1) 35%, rgba(8, 58, 144, 0.64) 46%, rgba(4, 138, 206, 1) 76%, rgba(2, 175, 230, 1) 88%, rgba(0, 212, 255, 1) 100%);
+    color: #443d3d;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ----- Titre principal ----- */
+h1 {
+    color: #0f0f0f;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ----- Tableaux ----- */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #e2d7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px #0e0e0ff3;
+    overflow: hidden;
+}
+
+th {
+    background-color: #295770;
+    color: rgb(24, 23, 23);
+    padding: 12px;
+    font-size: 1.1em;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #0f0404;
+}
+
+tr:nth-child(even) {
+    background-color: #8a97a1;
+}
+
+/* ----- Liens ----- */
+a {
+    color: #030708;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0c0000ef;
+    text-decoration: underline;
+}
+
+/* ----- Titres des sections ----- */
+h2 a {
+    color: #15152c;
+}
+
+h2 a:hover {
+    color: #01080a;
+}
+
+/* ----- Responsif ----- */
+@media only screen and (max-width: 600px) {
+    body {
+        background: radial-gradient(circle, #9ac598 0%, #b44378 100%);
+    }
+
+    table {
+        width: 95%;
+    }
+}

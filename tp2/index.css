@@ -1,0 +1,129 @@
+body {
+    background-color: #e9ebee;
+    font-family: system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: #1e88e5;
+    text-align: center;
+}
+
+/* Formulaire */
+form {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+p {
+    margin: 12px 0;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+input {
+    width: 250px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.icon-ok {
+    color: green;
+    margin-left: 5px;
+    display: none;
+    /* caché par défaut */
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+input {
+    width: 250px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Bouton principal */
+.btn-primary {
+    border-radius: 5px;
+    padding: 6px 12px;
+    background-color: #a3225e;
+    border-color: #0d6efd;
+    color: #0c0000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* Conteneur pour centrer le bouton */
+.submit-container {
+    text-align: center;
+    /* centre horizontalement */
+    margin-top: 20px;
+    /* espace entre le dernier champ et le bouton */
+}
+
+
+
+
+/* Cas du formulaire non valide */
+form:invalid input[type="submit"] {
+    background-color: #f706068f;
+}
+
+/* Cas d’un champ non valide */
+input:invalid {
+    border: 2px solid #e6240b;
+}
+
+/* cacher l’emoji pour les champs invalides */
+input:invalid+.icon-ok {
+    display: none;
+}
+
+/* Cas d’un champ valide */
+input:valid {
+    border: 2px solid green;
+}
+
+/* afficher l’emoji quand le champ est valide */
+input:valid+.icon-ok {
+    display: inline-block;
+}
+
+img {
+    width: 100px;
+    /* largeur désirée */
+    height: auto;
+    /* ajuste la hauteur automatiquement pour garder les proportions */
+}
