@@ -3,18 +3,18 @@ name: Déployer GitHub Pages
 on:
   push:
     branches:
-      - main  # Déploie à chaque push sur main
+      - main  # déclenchement à chaque push sur main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Déployer sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./          # le dossier contenant index.html
-          publish_branch: gh-pages # déploie vers la branche gh-pages
+          publish_dir: ./          # index.html est à la racine
+          publish_branch: gh-pages # déploiement vers gh-pages
