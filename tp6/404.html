@@ -1,23 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Redirection TP6 Angular</title>
-  <script>
-    // Redirige toutes les requêtes vers index.html pour Angular
-    var path = window.location.pathname;
-    var base = '/Application-Web-3IR/tp6/';
-    if (!path.startsWith(base)) {
-      window.location.href = base;
-    } else {
-      window.location.href = base + 'index.html';
+  <meta charset="utf-8">
+  <title>Météo Master 3IR²</title>
+  <base href="/Application-Web-3IR/tp6/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles-GNKNSRK2.css">
+  <style>
+    /* Styles de base conservés de ton index.html */
+    body {
+      margin: 0;
+      font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-  </script>
+
+    app-root:empty {
+      display: block;
+      padding: 20px;
+    }
+
+    app-root:empty::before {
+      content: "Chargement de l'application Météo...";
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
-  <p>Redirection vers l'application TP6 Angular...</p>
+  <app-root>
+    <!-- Contenu temporaire en cas d'erreur de chargement -->
+    <div style="padding: 20px; text-align: center;">
+      <h1>Application Météo - Master 3IR²</h1>
+      <p>Chargement de l'application en cours...</p>
+      <p>Si ce message persiste, vérifiez que les fichiers JavaScript sont disponibles.</p>
+    </div>
+  </app-root>
+
+  <script>
+    // Débogage
+    console.log("404.html chargé - redirection vers Angular si possible");
+
+    window.addEventListener('load', function () {
+      const appRoot = document.querySelector('app-root');
+      setTimeout(function () {
+        if (appRoot && appRoot.children.length === 1 && appRoot.querySelector('div')) {
+          appRoot.innerHTML = `
+            <div style="padding: 20px; text-align: center; color: #dc3545;">
+              <h1>Erreur de chargement</h1>
+              <p>L'application n'a pas pu se charger correctement.</p>
+              <p>Vérifiez la console pour les erreurs détaillées.</p>
+            </div>
+          `;
+        }
+      }, 3000);
+    });
+  </script>
+
+  <script src="polyfills-B6TNHZQ6.js" type="module"></script>
+  <script src="main-B3LMSGRE.js" type="module"></script>
 </body>
 
 </html>
