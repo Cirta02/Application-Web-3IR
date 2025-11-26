@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Page introuvable</title>
-    <base href="/Application-Web-3IR/tp6/">
-    <script>
-        // Redirige toute URL non trouvée vers l'application Angular
-        window.location.href = '/Application-Web-3IR/tp6/';
-    </script>
+  <meta charset="UTF-8">
+  <title>Redirection TP6 Angular</title>
+  <script>
+    // Redirige toutes les requêtes vers index.html pour Angular
+    var path = window.location.pathname;
+    var base = '/Application-Web-3IR/tp6/';
+    if (!path.startsWith(base)) {
+      window.location.href = base;
+    } else {
+      window.location.href = base + 'index.html';
+    }
+  </script>
 </head>
 
 <body>
-    <p>Redirection vers l'application météo...</p>
+  <p>Redirection vers l'application TP6 Angular...</p>
 </body>
 
 </html>
